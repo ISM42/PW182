@@ -1,0 +1,6 @@
+@extends('layouts.plantilla')
+
+@section('titulo','vista3')
+
+@section('contenido')
+@endsection
