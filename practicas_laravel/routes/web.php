@@ -17,7 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+
 Route::view('/','welcome')->name('apodoInicio');
 Route::view('/formulario', 'formulario')->name ('apodoFormulario');
-Route::view('/recuerdos', 'recuerdos')->name ('apodoRecuerdos');
+Route::view('/recuerdos', 'recuerdos')->name ('apodoRecuerdos');*/
+use App\Http\Controllers\diarioController;
+
+Route::get('/',[diarioController::class,'metodoInicio'])->name('apodoInicio');
+
+Route::get('/formulario',[diarioController::class,'metodoFormulario'])->name('apodoFormulario');
+
+Route::get('/recuerdos',[diarioController::class,'metodoRecuerdos'])->name('apodoRecuerdos');
