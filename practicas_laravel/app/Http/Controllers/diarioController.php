@@ -18,4 +18,9 @@ return view('formulario');
 public function metodoRecuerdos(){
 return view('recuerdos');    
 }
+
+public function metodoGuardar(Request $req){
+    return ('Se está procesando tu recuerdo...');    
+    }
+
 }
