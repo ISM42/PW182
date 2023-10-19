@@ -20,7 +20,16 @@ return view('recuerdos');
 }
 
 public function metodoGuardar(Request $req){
-    return ('Se está procesando tu recuerdo...');    
+    echo "<p>";
+        echo $req->path();
+        echo " - ";
+        echo $req->method();
+        echo " - ";
+        echo $req->ip();
+        echo " - ";
+        echo $req->url();
+
+    echo "</p>";
     }
 
 }

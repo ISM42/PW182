@@ -12,15 +12,17 @@
   </div>
 
   <div class="card-body">   
-  <form>
+  <form method = "POST" action="/guardarRecuerdo">
+  @csrf <!--   GENERADOR DE TOKEN //Con esta línea generamos un token oculto para que el middleware no bloqué la petición por POST -->
+  
   <div class="mb-3">
     <label class="form-label">Título: </label>
-    <input type="text" class="form-control" >
+    <input type="text" name ="txtTitulo" class="form-control" >
     
   </div>
   <div class="mb-3">
     <label class="form-label">Recuerdo: </label>
-    <input type="text" class="form-control">
+    <input type="text" name= "txtRecuerdo" class="form-control">
   </div>
   
 
