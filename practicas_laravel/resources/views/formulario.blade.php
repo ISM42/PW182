@@ -40,13 +40,13 @@
   
   <div class="mb-3">
     <label class="form-label">Título: </label>
-    <input type="text" name ="txtTitulo" class="form-control" value={{old('txtTitulo')}} >
+    <input type="text" name ="txtTitulo" class="form-control" value="{{old('txtTitulo')}}" >
     <p class="text-danger fst-italic">{{$errors->first('txtTitulo')}}      </p>
   </div>
 
   <div class="mb-3">
     <label class="form-label">Recuerdo: </label>
-    <input type="text" name= "txtRecuerdo" class="form-control" value={{old('txtRecuerdo')}}>
+    <input type="text" name= "txtRecuerdo" class="form-control" value="{{old('txtRecuerdo')}}">
     <p class="text-danger fst-italic">{{$errors->first('txtRecuerdo')}}      </p> 
   </div>
   
