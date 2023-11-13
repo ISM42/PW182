@@ -22,14 +22,19 @@ Route::view('/','welcome')->name('apodoInicio');
 Route::view('/formulario', 'formulario')->name ('apodoFormulario');
 Route::view('/recuerdos', 'recuerdos')->name ('apodoRecuerdos');*/
 use App\Http\Controllers\diarioController;
+use App\Http\Controllers\ControllerCRUDD;
+
+//RUTAS ControllerCRUDD
+Route::get('/recuerdo/create', [ControllerCRUDD::class,'create'])->name('recuerdo.create');
+Route::post('/recuerdo',[ControllerCRUDD::class,'store'])->name('recuerdo.store');
 
 
 // Rutas individuales para controlador
 Route::get('/',[diarioController::class,'metodoInicio'])->name('apodoInicio');
-Route::get('/formulario',[diarioController::class,'metodoFormulario'])->name('apodoFormulario');
+//Route::get('/formulario',[diarioController::class,'metodoFormulario'])->name('apodoFormulario');
 Route::get('/recuerdos',[diarioController::class,'metodoRecuerdos'])->name('apodoRecuerdos');
 
-Route::post('/guardarRecuerdo',[diarioController::class,'metodoGuardar'])->name('guardar');
+//Route::post('/guardarRecuerdo',[diarioController::class,'metodoGuardar'])->name('guardar');
 
 
 //Rutas agrupadas tipo controlador

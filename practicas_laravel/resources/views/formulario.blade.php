@@ -35,7 +35,7 @@
   </div>
 
   <div class="card-body">   
-  <form method = "POST" action="/guardarRecuerdo">
+  <form method = "POST" action="/recuerdo">
   @csrf <!--   GENERADOR DE TOKEN //Con esta línea generamos un token oculto para que el middleware no bloqué la petición por POST -->
   
   <div class="mb-3">
