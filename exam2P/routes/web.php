@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ComicsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pruebaBootstrap');
+/*Route::view('/', function () {
+    return view('comics');
+});*/
+
+Route::get('/',[ComicsController::class,'metodoGuardar'])->name ('guardar_comics');
+
+Route::post('/guardarForm', function () {
+    return view('comics');
 });
