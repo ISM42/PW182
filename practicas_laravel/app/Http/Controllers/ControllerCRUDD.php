@@ -62,9 +62,16 @@ class ControllerCRUDD extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorFormDiario $request, string $id)
     {
-        //
+        //el id sin "$" es el nombre del campo en la BD
+        DB::table('tb_recuerdos')->where('id',$id)->update([
+            "titulo"=> $request->input('txtTitulo'),
+            "recuerdo"=> $request->input('txtRecuerdo'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('/recuerdo/create')->with('confirmacion','Recuerdo modificado en la BD');
     }
 
     /**
