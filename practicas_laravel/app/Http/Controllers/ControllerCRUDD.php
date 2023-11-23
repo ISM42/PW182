@@ -79,6 +79,8 @@ class ControllerCRUDD extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('tb_recuerdos')->where('id', $id)->delete();
+    
+        return redirect('/recuerdo/create')->with('confirmacion', 'Recuerdo eliminado de la BD');
     }
 }

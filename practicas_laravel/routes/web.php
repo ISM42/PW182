@@ -29,6 +29,7 @@ Route::get('/recuerdo/create', [ControllerCRUDD::class,'create'])->name('recuerd
 Route::post('/recuerdo',[ControllerCRUDD::class,'store'])->name('recuerdo.store');
 Route::get('/recuerdo',[ControllerCRUDD::class,'index'])->name('recuerdo.index');
 Route::post('/recuerdo/{id}/confirm',[ControllerCRUDD::class,'update'])->name('recuerdo.update');
+Route::post('/e_recuerdo/{id}/confirm',[ControllerCRUDD::class,'destroy'])->name('recuerdo.destroy');
 
 
 // Rutas individuales para controlador

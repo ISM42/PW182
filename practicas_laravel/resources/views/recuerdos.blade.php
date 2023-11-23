@@ -20,10 +20,13 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar{{ $item->id }}">
   Editar
 </button>
-    <a href="#" class="btn btn-danger">Borrar</a>
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar{{ $item->id }}">
+  Eliminar
+</button>
   </div>
 </div>
 @include('partials.modal')
+@include('partials.modal_delete')
 @endforeach
 </div>
 
