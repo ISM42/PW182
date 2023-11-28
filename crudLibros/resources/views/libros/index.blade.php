@@ -59,10 +59,11 @@
                               </div>    
                         </td>
                     </tr>
+                    @include('libros.options')
+@endforeach
             </tbody>
         </table>
-        @include('libros.options')
-@endforeach
+       
     </div>{{-- cierre tableresp --}}
     
 </div> {{-- cierre col-8 --}}

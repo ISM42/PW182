@@ -44,9 +44,9 @@ class LibroController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, libro $id)
+    public function update(Request $request, $id)
     {
-        $updatelibro= libro::find($id);
+        $uptLibro= libro::find($id);
         $uptLibro->titulo = $request ->txtTitulo;
         $uptLibro->autor = $request ->txtaut;
         $uptLibro->paginas = $request ->txtpag;

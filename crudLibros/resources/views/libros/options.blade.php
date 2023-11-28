@@ -36,7 +36,7 @@
 
                 <div class="mb-3"> 
                   <label class="form-label">Año de Publicacion: </label>
-                  <input type="number" class="form-control" name="textanio" value="{{$item->anio}}">
+                  <input type="number" class="form-control" name="txtanio" value="{{$item->anio}}">
                   </div>
    
         </div>
